@@ -30,7 +30,7 @@ This is a GitHub client Android application built using Jetpack Compose, designe
 - Allows users to switch the app language (e.g., English and Chinese).
 - Supports theme switching (Light and Dark), allowing users to choose their preferred style.
 
-  ![Settings Screen](./Screenshot_20240829_133336_HelloGitHub.jpg)
+  ![Settings Screen](./Screenshot_20240829_141358_HelloGitHub.jpg)
 
 
 ## Tech Stack
