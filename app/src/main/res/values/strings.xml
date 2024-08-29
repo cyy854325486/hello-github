@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">HelloGitHub</string>
+    <string name="avatar">avatar</string>
+
+    <string name="tab_home">Home</string>
+    <string name="tab_profile">Profile</string>
+    <string name="tab_settings">Settings</string>
+
+    <string name="btn_search">Search</string>
+    <string name="place_holder_search">Search repositories...</string>
+
+    <string name="page_profile_name">My GitHub</string>
+    <string name="btn_login">Login</string>
+
+    <string name="page_settings_name">Settings</string>
+    <string name="item_title_language">Language Settings</string>
+    <string name="item_title_theme">theme Settings</string>
+
+
+    <string name="dialog_banner_title">Submit Issue</string>
+    <string name="dialog_title">Title</string>
+    <string name="dialog_description">Description</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="btn_submit">Submit</string>
+
+    <string name="select_title_language">Language</string>
+    <string name="select_title_stars">Stars</string>
+
+    <string name="request_error">Request failed. Please try again later.</string>
+</resources>

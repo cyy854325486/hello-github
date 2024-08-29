@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base application theme -->
+    <style name="Theme.MyApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color -->
+        <item name="colorPrimary">@color/lightPrimary</item>
+        <item name="colorPrimaryVariant">@color/lightPrimaryDark</item>
+        <item name="colorOnPrimary">@color/lightOnPrimary</item>
+        <!-- Other theme attributes -->
+    </style>
+
+    <!-- Light theme -->
+    <style name="Theme.MyApp.Light" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/lightPrimary</item>
+        <item name="colorPrimaryVariant">@color/lightPrimaryDark</item>
+        <item name="colorOnPrimary">@color/lightOnPrimary</item>
+    </style>
+
+    <!-- Dark theme -->
+    <style name="Theme.MyApp.Dark" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/darkPrimary</item>
+        <item name="colorPrimaryVariant">@color/darkPrimaryDark</item>
+        <item name="colorOnPrimary">@color/darkOnPrimary</item>
+    </style>
+</resources>
