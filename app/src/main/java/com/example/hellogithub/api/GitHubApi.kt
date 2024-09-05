@@ -38,8 +38,8 @@ interface GitHubApi {
     @POST("repos/{owner}/{repo}/issues")
     suspend fun createIssue(
         @Header("Authorization") authToken: String,
-        @Path("owner") owner: String,               // 仓库拥有者
-        @Path("repo") repo: String,                 // 仓库名称
-        @Body issueRequest: IssueRequest            // Issue 请求体
+        @Path("owner") owner: String,
+        @Path("repo") repo: String,
+        @Body issueRequest: IssueRequest
     ): IssueResponse
 }

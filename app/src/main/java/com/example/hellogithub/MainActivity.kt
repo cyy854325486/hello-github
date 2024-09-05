@@ -49,6 +49,7 @@ import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.Dialog
 import androidx.datastore.core.DataStore
@@ -107,16 +108,13 @@ class MainActivity : ComponentActivity() {
             val ex = AuthorizationException.fromIntent(data)
 
             if (response != null) {
-                // 授权成功，获取授权码
                 val code = response.authorizationCode
                 Log.d("OAuth", "Authorization code: $code")
 
-                // Call ViewModel to get access token
                 code?.let {
                     profileViewModel.getAccessToken(CLIENT_ID, CLIENT_SECRET, it)
                 }
             } else {
-                // 处理错误
                 Log.e("OAuth", "Authorization failed: $ex")
             }
         }
@@ -124,6 +122,7 @@ class MainActivity : ComponentActivity() {
 
 
     @Composable
+    @Preview
     fun MainScreen() {
         val navController = rememberNavController()
         Scaffold(
@@ -166,6 +165,7 @@ class MainActivity : ComponentActivity() {
     }
 
     @Composable
+    @Preview
     fun SettingsView(viewModel: SettingsViewModel = viewModel()) {
         val currentLanguage by viewModel.language.observeAsState(initial = "en")
         val currentTheme by viewModel.theme.observeAsState(initial = "light")
@@ -394,11 +394,11 @@ class MainActivity : ComponentActivity() {
 
     private fun startAuthProcess() {
         val serviceConfig = AuthorizationServiceConfiguration(
-            Uri.parse(AUTH_URL), // 授权端点
-            Uri.parse(ACCESS_TOKEN_URL) // 令牌端点
+            Uri.parse(AUTH_URL),
+            Uri.parse(ACCESS_TOKEN_URL)
         )
 
-        val redirectUri = Uri.parse(GitHubConfig.REDIRECT_URI) // 保持和 GitHub 配置一致
+        val redirectUri = Uri.parse(GitHubConfig.REDIRECT_URI)
 
         val authRequest = AuthorizationRequest.Builder(
             serviceConfig,

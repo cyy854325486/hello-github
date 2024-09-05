@@ -37,7 +37,7 @@ class ProfileViewModel(
     private val _issueCreationResult = MutableLiveData<IssueResponse?>()
     val issueCreationResult: LiveData<IssueResponse?> get() = _issueCreationResult
 
-    // 定义 Preferences Key
+    //Preferences Key
     private val ACCESS_TOKEN_KEY = stringPreferencesKey("access_token")
 
     init {
